@@ -15,7 +15,7 @@ Fracao simplificarFracoes(FracaoF){
     int mdc = calcularMDC(F.Num, F.Den);
     F.Num = F.Num / mdc;
     F.Den = F.Den / mdc;
-    return 0;
+    return 
 
 }
 
