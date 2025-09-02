@@ -6,7 +6,11 @@
 
 int main (){
 
-    Time * Tabela = LerDados("tabela.csv"); 
+    Equipe * Tabela = LerDados("tabela.csv"); 
+
+    printf("%2f%%\n", getAproveitamento(Tabela, "Palmeiras"));
+
+
 
 
 

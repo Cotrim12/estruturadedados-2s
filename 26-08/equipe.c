@@ -6,10 +6,10 @@
 
 #include "equipe.h"
 
-Time * LerDados(char * Arquivo){
+Equipe * LerDados(char * Arquivo){
 
 
-    Time * X = malloc(20 * sizeof (Time));
+    Equipe * X = malloc(20 * sizeof (Time));
     if (X == NULL) {
         printf("Erro: memoria insuficiente!\n");
         exit(1);
@@ -25,4 +25,26 @@ Time * LerDados(char * Arquivo){
     fclose(fp);
     return X;
 
+}
+
+int getPontos(Equipe * T, int Posicao){
+
+    int i;
+
+    for(i = 0; i < 20; i++)
+    if(T[i].Posicao == Posicao)
+    return T[i].Pontos;
+
+    return ERRO;
+}
+
+float getAproveitamento(Equipe * T, char * Nome){
+
+    int i;
+
+    for(i = 0; i < 20; i++)
+    if (strcmp(t[i].Nome, Nome) == 0)
+    return T[i].Aproveitamento;
+
+    return ERRO;
 }
