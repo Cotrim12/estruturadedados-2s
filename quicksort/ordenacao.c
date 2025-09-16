@@ -4,7 +4,8 @@
 
 void TrocarElemento(int * A, int * B);
 int Particao(int * V, int Inf, int Sup);
-void QuickSort(int * V, int Inf, Int Sup);
+void QuickSort(int * V, int Inf, int Sup);
+void ExibirVetor(int * V, int N);
 
 
 int main(){
@@ -44,18 +45,25 @@ int Particao(int * V, int Inf, int Sup){
             i++;
             j--;
         }
-
+    
+    return i;
         
     }
 
-    return i;
 
-}
 
-void QuickSort(int * V, int Inf, Int Sup){
+
+void QuickSort(int * V, int Inf, int Sup){
 if(Inf < Sup);
 int P = Particao(V, Inf, Sup);
 QuickSort(V, Inf, P - 1);
 QuickSort(V, P, sup);
 
+}
+
+}
+
+void ExibirVetor(int * V, int N){
+    for(int i = 0; i < N; i++) printf("%d\t", V[i]);
+    printf("\n");
 }
