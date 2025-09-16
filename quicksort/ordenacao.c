@@ -4,15 +4,20 @@
 
 void TrocarElemento(int * A, int * B);
 int Particao(int * V, int Inf, int Sup);
-void QuickSort(int * V, int Inf, int Sup);
 void ExibirVetor(int * V, int N);
+void QuickSort(int * V, int Inf, int Sup);
+
+void InsertionSort(int * V, int N);
+
+#define TAMANHO 500000
 
 
 int main(){
 
     int Vetor[] = {3, 6, 4, 5, 1, 7, 2};
     int Tamanho = sizeof(Vetor) / sizeof(int);
-    Particao(Vetor, 0, Tamanho - 1);
+    QuickSort(Vetor, 0, Tamanho - 1);
+    ExibirVetor(Vetor, Tamanho);
 
     int X = 25;
     int Y = 37;
@@ -57,7 +62,7 @@ void QuickSort(int * V, int Inf, int Sup){
 if(Inf < Sup);
 int P = Particao(V, Inf, Sup);
 QuickSort(V, Inf, P - 1);
-QuickSort(V, P, sup);
+QuickSort(V, P, Sup);
 
 }
 
